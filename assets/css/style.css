@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #edf0f1;
+	padding: 80px 0 0 0;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	padding: 15px;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: #25b99a;
+	box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+header input {
+	width: 100%;
+	height: 50px;
+	float: left;
+	background-color: rgba(255, 255, 255, 0.2);
+	border: 0px;
+	box-shadow: none;
+	outline: none;
+	color: #fff;
+	padding: 0px 60px 0px 18px;
+	font-size: 16px;
+	font-weight: 400;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+header input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.75);
+}
+header input:-moz-input-placeholder {
+	color: rgba(255, 255, 255, 0.75);
+}
+header input::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.75);
+}
+header input:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 15px;
+	right: 12px;
+	z-index: 2;
+	border-radius: 25px;
+	background-color: #fff;
+	border: 0px;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+header button:after,
+header button:before {
+    position: absolute;
+    content: "";
+    background: #25b99a;
+	
+}
+header button:after {
+    height: 2px;
+    width: 16px;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header button:before {
+    height: 16px;
+    width: 2px;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+}
+
+.todcontainer {
+	padding: 15px;
+}
+ul.todo {
+    margin: 0px;
+    list-style: none;
+    overflow: hidden;
+    padding: 0px;
+}
+ul.todo li {
+	width: 100%;
+	min-height: 50px;
+	float: left;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	color: #444;
+	background-color: #fff;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+	margin: 0px 0px 10px 0px;
+	padding: 14px 100px 14px 14px;
+	list-style: none;
+	position: relative;
+}
+ul.todo li:last-of-type {
+	margin: 0px;
+}
+ul.todo li .buttons {
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+ul.todo li .buttons button {
+    width: 50px;
+    float: left;
+    height: 50px;
+    background: #fff;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+}
+ul.todo li .buttons button span {
+	transition: all 0.4s;
+}
+span.glyphicon-ok {
+    border: 1px solid #25b99a;
+    border-radius: 50%;
+    padding: 4px;
+    color: #25b99a;
+}
+span.glyphicon-trash:hover {
+	color: #25b99a;
+}
+#completed span.glyphicon-ok,
+span.glyphicon-ok:hover {
+	background-color: #25b99a;
+	color: #fff;
+}
+
+ul.todo#completed {
+	position: relative;
+	padding: 60px 0 0 0;
+}
+ul.todo#completed:before {
+	position: absolute;
+	content: "";
+	width: 150px;
+	height: 1px;
+	background-color: #d8e5e0;
+	height: 1px;
+	top: 30px;
+	left: 50%;
+	margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after {
+	content: 'You have nothing to-do';
+	margin: 15px 0 0 0;
+}
+ul.todo#completed:empty:after {
+	content: 'You have yet to complete any tasks';
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+	width: 100%;
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	color: #313131;
+	position: absolute;
+}
